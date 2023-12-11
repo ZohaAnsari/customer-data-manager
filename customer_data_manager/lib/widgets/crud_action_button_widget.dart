@@ -13,7 +13,9 @@ class CRUDActionButtonWidget extends StatelessWidget {
     return SizedBox(
       width: _getScreenWidth(context) / 2,
       child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            controller.determineAction(operation, context); 
+          },
           child: Text(controller.determineOperation(operation))),
     );
   }
