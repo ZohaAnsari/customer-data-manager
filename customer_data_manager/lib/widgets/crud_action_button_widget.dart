@@ -10,8 +10,16 @@ class CRUDActionButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-        onPressed: () {},
-        child: Text(controller.determineOperation(operation)));
+    return SizedBox(
+      width: _getScreenWidth(context) / 2,
+      child: ElevatedButton(
+          onPressed: () {},
+          child: Text(controller.determineOperation(operation))),
+    );
+  }
+
+  //general methods : ..........................................................
+  _getScreenWidth(context) {
+    return MediaQuery.of(context).size.width;
   }
 }
